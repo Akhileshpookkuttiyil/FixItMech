@@ -17,18 +17,18 @@ const services = [
 
 const Services = () => {
   return (
-<section className="py-8 bg-black">
-<h2 className="text-center text-4xl font-semibold text-white mb-6 flex items-center justify-center">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 text-red-600 mr-3">
-    <path fillRule="evenodd" d="M19 9l-7 7-7-7" clipRule="evenodd" />
-  </svg>
+<section className="py-12 bg-gray-900 max-w-7xl mx-auto rounded-full">
+  <h2 className="text-center text-5xl font-semibold text-white mb-6 flex items-center justify-center">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 text-red-600 mr-3">
+      <path fillRule="evenodd" d="M19 9l-7 7-7-7" clipRule="evenodd" />
+    </svg>
     Why Choose Us
-</h2>
-<div className="flex flex-wrap justify-center gap-6">
+  </h2>
+  <div className="flex flex-wrap justify-center gap-6">
     {services.map((service, index) => (
       <div
         key={index}
-        className="flex flex-col items-center text-center p-4 bg-gray-800 rounded-lg shadow-lg transition-transform transform hover:scale-105 duration-300 flex-shrink-0 w-full sm:w-48 h-64"
+        className="flex flex-col items-center text-center p-4 bg-gray-800 rounded-lg shadow-lg transition-transform transform hover:scale-105 duration-300 flex-shrink-0 w-full sm:w-40 h-64"
       >
         <img
           src={service.icon}
@@ -43,7 +43,7 @@ const Services = () => {
         </p>
       </div>
     ))}
-</div>
+  </div>
 </section>
   );
 };
