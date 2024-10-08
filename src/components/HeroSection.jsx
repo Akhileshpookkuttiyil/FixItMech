@@ -66,15 +66,16 @@ const HeroSection = () => {
         <div className="container mx-auto flex items-center justify-between p-4">
           <div className="flex items-center" data-aos="fade-right">
             <img src={logo} alt="Logo" className="h-5 sm:h-9 mr-2" />
-            <h1 className="text-base sm:text-2xl md:text-3xl font-bold text-red-400 whitespace-nowrap">FixItMech</h1>
+            <h1 className="text-base sm:text-2xl md:text-3xl font-bold text-red-800 whitespace-nowrap">FixItMech</h1>
           </div>
 
-          <nav className="hidden md:flex" data-aos="fade-left">
+          <nav className="hidden md:flex " data-aos="fade-left">
             <ul className="flex space-x-8">
               <li><a href="#" className="text-white hover:text-blue-500">Home</a></li>
-              <li><a href="#" className="text-white hover:text-blue-500">About</a></li>
               <li><a href="#" className="text-white hover:text-blue-500">Services</a></li>
               <li><a href="#" className="text-white hover:text-blue-500">Contact</a></li>
+              <li><a href="#" className="text-white hover:text-blue-500">About</a></li>
+              <li><a href="#" className="text-white bg-red-800 rounded-sm p-2 hover:text-blue-500">Login</a></li>
             </ul>
           </nav>
 
@@ -95,9 +96,10 @@ const HeroSection = () => {
           <nav id="mobile-menu" className="md:hidden">
             <ul className="flex flex-col space-y-4 text-center mt-2">
               <li><a href="#" className="text-white hover:text-blue-500">Home</a></li>
-              <li><a href="#" className="text-white hover:text-blue-500">About</a></li>
               <li><a href="#" className="text-white hover:text-blue-500">Services</a></li>
               <li><a href="#" className="text-white hover:text-blue-500">Contact</a></li>
+              <li><a href="#" className="text-white hover:text-blue-500">About</a></li>
+              <li><a href="#" className="text-white bg-red-800 rounded-sm p-2 hover:text-blue-500">Login</a></li>
             </ul>
           </nav>
         )}
@@ -128,54 +130,54 @@ const HeroSection = () => {
         <div className="bg-transparent border border-white border-opacity-50 p-4 w-full sm:w-2/3 md:w-1/2 lg:w-1/3 mx-auto mt-2 mb-12" data-aos="fade-up">
           <h3 className="text-2xl font-semibold mb-4">Register for Services</h3>
           <form>
-            <div className="mb-4">
-              <label className="block text-sm font-medium text-white" htmlFor="name">Name</label>
-              <input
-                type="text"
-                id="name"
-                autoComplete="off"
-                className="mt-1 block w-full p-2 border border-white border-opacity-50 bg-transparent text-white placeholder-gray-400"
-                placeholder="Your Name"
-                required
-              />
-            </div>
-            <div className="mb-4">
-              <label className="block text-sm font-medium text-white" htmlFor="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                autoComplete="off"
-                className="mt-1 block w-full p-2 border border-white border-opacity-50 bg-transparent text-white placeholder-gray-400"
-                placeholder="Your Email"
-                required
-              />
-            </div>
-            <div className="mb-4">
-              <label className="block text-sm font-medium text-white" htmlFor="service">Select Service</label>
-              <select
-                id="service"
-                className="mt-1 block w-full p-2 border border-white border-opacity-50 bg-transparent text-gray-400 placeholder-gray-400"
-                required
-              >
-                <option value="">Choose a service</option>
-                <option value="repair">Repair</option>
-                <option value="maintenance">Maintenance</option>
-                <option value="diagnostics">Diagnostics</option>
-              </select>
-            </div>
-            <div className="mb-4">
-              <label className="block text-sm font-medium text-white" htmlFor="date">Date</label>
-              <input
-                type="date"
-                id="date"
-                className="mt-1 block w-full p-2 border border-white border-opacity-50 bg-transparent text-white placeholder-gray-400"
-                required
-              />
-            </div>
-            <button type="submit" className="w-full border border-white border-opacity-50 bg-transparent text-white py-2">
-              Submit
-            </button>
-          </form>
+  <div className="mb-4">
+    <label className="block text-sm font-medium text-white" htmlFor="name">Name</label>
+    <input
+      type="text"
+      id="name"
+      autoComplete="off"
+      className="mt-1 block w-full p-2 border border-white border-opacity-50 bg-transparent text-white placeholder-gray-400 focus:bg-transparent"
+      placeholder="Your Name"
+      required
+    />
+  </div>
+  <div className="mb-4">
+    <label className="block text-sm font-medium text-white" htmlFor="email">Email</label>
+    <input
+      type="email"
+      id="email"
+      autoComplete="off"
+      className="mt-1 block w-full p-2 border border-white border-opacity-50 bg-transparent text-white placeholder-gray-400 focus:bg-transparent"
+      placeholder="Your Email"
+      required
+    />
+  </div>
+  <div className="mb-4">
+    <label className="block text-sm font-medium text-white" htmlFor="service">Select Service</label>
+    <select
+      id="service"
+      className="mt-1 block w-full p-2 border border-white border-opacity-50 bg-transparent text-gray-400 placeholder-gray-400 appearance-none focus:ring-0 focus:bg-transparent focus:outline-none"
+      required
+    >
+      <option value="">Choose a service</option>
+      <option value="repair" className="bg-gray-800">Repair</option>
+      <option value="maintenance" className="bg-gray-800">Maintenance</option>
+      <option value="diagnostics" className="bg-gray-800">Diagnostics</option>
+    </select>
+  </div>
+  <div className="mb-4">
+    <label className="block text-sm font-medium text-white" htmlFor="date">Date</label>
+    <input
+      type="date"
+      id="date"
+      className="mt-1 block w-full p-2 border border-white border-opacity-50 bg-transparent text-white placeholder-gray-400 focus:bg-transparent"
+      required
+    />
+  </div>
+  <button type="submit" className="w-full border border-white border-opacity-50 bg-transparent text-white py-2">
+    Submit
+  </button>
+</form>
         </div>
       </div>
     </section>
