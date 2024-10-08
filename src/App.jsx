@@ -7,6 +7,8 @@ import ServiceSection from './components/SeviceSection';
 // import BookServices from './components/BookServices';
 import Features from './components/Features';
 // import Store from './components/Store';
+import FAQ from './components/Faq';
+import { FaQ } from 'react-icons/fa6';
 
 
 function App() {
@@ -17,7 +19,8 @@ function App() {
       <Features/>
       <Services/>
       {/* <Store/>
-      <BookServices/> */}
+      <BookServices/> */}.
+      <FAQ/>
       <Footer />
     </div>
   );

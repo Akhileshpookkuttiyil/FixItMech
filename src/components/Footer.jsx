@@ -3,13 +3,13 @@ import logo from "../assets/img/car-icn2.png"; // Adjust path if needed
 
 const Footer = () => {
   return (
-    <footer className="bg-white text-gray-700 py-12 mt-12">
+    <footer className="bg-black text-gray-700 py-12 mt-12">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           {/* Logo and Title */}
           <div className="flex items-center">
             <img src={logo} alt="FixItMech Logo" className="h-10" />
-            <span className="text-blue-900 text-2xl ml-3">FixItMech</span>
+            <span className="text-red-900 font-bold text-2xl ml-3">FixItMech</span>
           </div>
 
           {/* Copyright */}
