@@ -8,14 +8,14 @@ import ServiceSection from './components/SeviceSection';
 import Features from './components/Features';
 // import Store from './components/Store';
 import FAQ from './components/Faq';
-import { FaQ } from 'react-icons/fa6';
-
+import Steps from './components/Steps';
 
 function App() {
   return (
     <div>
       <HeroSection />
       <ServiceSection/>
+      <Steps/>
       <Features/>
       <Services/>
       {/* <Store/>

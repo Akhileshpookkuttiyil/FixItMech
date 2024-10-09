@@ -36,12 +36,12 @@ const features = [
 
 const Features = () => {
   return (
-    <div className="py-4 bg-gray-50">
+    <div className="pt-8 py-4 bg-gray-50">
       <div className="container mx-auto px-4">
         {features.map((feature, index) => (
           <div
             key={feature.id}
-            className={`flex flex-col md:flex-row items-center my-16 ${
+            className={`flex flex-col md:flex-row items-center my-48 ${
               index % 2 === 0 ? 'md:flex-row-reverse' : ''
             }`}
           >

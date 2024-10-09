@@ -17,7 +17,7 @@ const services = [
 
 const Services = () => {
   return (
-<section className="py-10 bg-gray-900 max-w-7xl mx-auto rounded-full">
+<section className="py-10  bg-gray-900 max-w-7xl mx-auto rounded-full">
   <h2 className="text-center text-4xl font-semibold text-white mb-6 flex items-center justify-center">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 text-red-600 mr-3">
       <path fillRule="evenodd" d="M19 9l-7 7-7-7" clipRule="evenodd" />

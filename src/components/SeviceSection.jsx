@@ -7,7 +7,7 @@ import Payment from "../assets/img/payment.png";
 
 const ServiceSection = () => {
   return (
-    <div className="py-16 px-8 bg-gray-50">
+    <div className="flex flex-col justify-center items-center min-h-screen py-16 px-8 bg-gray-50">
       <h2 className="text-3xl font-bold text-center mb-6">How do we help you?</h2>
       <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
         Enjoy fast and reliable service with our professional bike and car repair solutions! 
