@@ -6,7 +6,6 @@ import slider1 from '../assets/img/1st.jpg';
 import slider2 from '../assets/img/2nd.jpg';
 import slider3 from '../assets/img/3rd.jpg';
 
-
 const HeroSection = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -63,14 +62,14 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black opacity-50"></div>
 
       <header className="relative z-10">
-        <div className="container mx-auto flex items-center justify-between p-4">
+        <div className="container mx-auto flex flex-wrap items-center justify-between p-4">
           <div className="flex items-center" data-aos="fade-right">
             <img src={logo} alt="Logo" className="h-5 sm:h-9 mr-2" />
             <h1 className="text-base sm:text-2xl md:text-3xl font-bold text-red-800 whitespace-nowrap">FixItMech</h1>
           </div>
 
           <nav className="hidden md:flex " data-aos="fade-left">
-            <ul className="flex space-x-8">
+            <ul className="flex space-x-4">
               <li><a href="#" className="text-white hover:text-blue-500">Home</a></li>
               <li><a href="#" className="text-white hover:text-blue-500">Services</a></li>
               <li><a href="#" className="text-white hover:text-blue-500">Contact</a></li>
@@ -130,54 +129,52 @@ const HeroSection = () => {
         <div className="bg-transparent border border-white border-opacity-50 p-4 w-full sm:w-2/3 md:w-1/2 lg:w-1/3 mx-auto mt-2 mb-12" data-aos="fade-up">
           <h3 className="text-2xl font-semibold mb-4">Register for Services</h3>
           <form>
-  <div className="mb-4">
-    <label className="block text-sm font-medium text-white" htmlFor="name">Name</label>
-    <input
-      type="text"
-      id="name"
-      autoComplete="off"
-      className="mt-1 block w-full p-2 border border-white border-opacity-50 bg-transparent text-white placeholder-gray-400 focus:bg-transparent"
-      placeholder="Your Name"
-      required
-    />
-  </div>
-  <div className="mb-4">
-    <label className="block text-sm font-medium text-white" htmlFor="email">Email</label>
-    <input
-      type="email"
-      id="email"
-      autoComplete="off"
-      className="mt-1 block w-full p-2 border border-white border-opacity-50 bg-transparent text-white placeholder-gray-400 focus:bg-transparent"
-      placeholder="Your Email"
-      required
-    />
-  </div>
-  <div className="mb-4">
-    <label className="block text-sm font-medium text-white" htmlFor="service">Select Service</label>
-    <select
-      id="service"
-      className="mt-1 block w-full p-2 border border-white border-opacity-50 bg-transparent text-gray-400 placeholder-gray-400 appearance-none focus:ring-0 focus:bg-transparent focus:outline-none"
-      required
-    >
-      <option value="">Choose a service</option>
-      <option value="repair" className="bg-gray-800">Repair</option>
-      <option value="maintenance" className="bg-gray-800">Maintenance</option>
-      <option value="diagnostics" className="bg-gray-800">Diagnostics</option>
-    </select>
-  </div>
-  <div className="mb-4">
-    <label className="block text-sm font-medium text-white" htmlFor="date">Date</label>
-    <input
-      type="date"
-      id="date"
-      className="mt-1 block w-full p-2 border border-white border-opacity-50 bg-transparent text-white placeholder-gray-400 focus:bg-transparent"
-      required
-    />
-  </div>
-  <button type="submit" className="w-full border border-white border-opacity-50 bg-transparent text-white py-2">
-    Submit
-  </button>
-</form>
+            <div className="mb-4">
+              <label className="block text-sm font-medium text-white" htmlFor="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                autoComplete="off"
+                className="mt-1 block w-full p-2 border border-white border-opacity-50 bg-transparent text-white placeholder-gray-400 focus:bg-transparent"
+                placeholder="Your Name"
+                required
+              />
+            </div>
+            <div className="mb-4">
+              <label className="block text-sm font-medium text-white" htmlFor="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                autoComplete="off"
+                className="mt-1 block w-full p-2 border border-white border-opacity-50 bg-transparent text-white placeholder-gray-400 focus:bg-transparent"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+            <div className="mb-4">
+              <label className="block text-sm font-medium text-white" htmlFor="service">Select Service</label>
+              <select
+                id="service"
+                className="mt-1 block w-full p-2 border border-white border-opacity-50 bg-transparent text-gray-400 placeholder-gray-400 appearance-none focus:ring-0 focus:bg-transparent focus:outline-none"
+                required
+              >
+                <option value="">Choose a service</option>
+                <option value="repair" className="bg-gray-800">Repair</option>
+                <option value="maintenance" className="bg-gray-800">Maintenance</option>
+                <option value="diagnostics" className="bg-gray-800">Diagnostics</option>
+              </select>
+            </div>
+            <div className="mb-4">
+              <label className="block text-sm font-medium text-white" htmlFor="date">Date</label>
+              <input
+                type="date"
+                id="date"
+                className="mt-1 block w-full p-2 border border-white border-opacity-50 bg-transparent text-white placeholder-gray-400 focus:bg-transparent"
+                required
+              />
+            </div>
+            <button type="submit" className="w-full border border-white border-opacity-50 bg-transparent text-white py-2 hover:bg-white hover:text-blue-500 transition">Submit</button>
+          </form>
         </div>
       </div>
     </section>

@@ -108,9 +108,9 @@ const Store = () => {
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-8">Browse Our Parts Collection</h2>
         
-        <div className="flex justify-center flex-wrap gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {productGroups.map((group) => (
-            <div key={group.id} className="bg-white shadow-lg rounded-lg p-6 text-center w-64">
+            <div key={group.id} className="bg-white shadow-lg rounded-lg p-6 text-center">
               <img
                 src={group.icon}
                 alt={group.title}

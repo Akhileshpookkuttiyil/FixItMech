@@ -6,19 +6,19 @@ import Payment from "../assets/img/payment.png";
 
 const ServiceSection = () => {
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen py-16 px-8 bg-gray-50">
+    <div className="flex flex-col justify-center items-center min-h-screen py-16 px-4 md:px-8 bg-gray-50">
       <h2 className="text-3xl font-bold text-center mb-6">How do we help you?</h2>
       <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
         Enjoy fast and reliable service with our professional bike and car repair solutions! 
         Our certified technicians arrive with all the necessary tools to quickly address any issue, 
         ensuring your vehicle is back on the road in optimal condition.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
         <div className="text-center">
           <img
             src={CarInspection1}
             alt="Inspect Vehicle"
-            className="mx-auto mb-4 w-24 h-24"
+            className="mx-auto mb-4 w-20 h-20 md:w-24 md:h-24"
           />
           <h3 className="text-lg font-medium max-w-xs mx-auto">
             Inspect your vehicle thoroughly
@@ -31,7 +31,7 @@ const ServiceSection = () => {
           <img
             src={CarInspection2}
             alt="Immediate Repairs"
-            className="mx-auto mb-4 w-24 h-24"
+            className="mx-auto mb-4 w-20 h-20 md:w-24 md:h-24"
           />
           <h3 className="text-lg font-medium max-w-xs mx-auto">
             Provide quick repair solutions
@@ -44,7 +44,7 @@ const ServiceSection = () => {
           <img
             src={CarInspection3}
             alt="Double Check Faults"
-            className="mx-auto mb-4 w-24 h-24"
+            className="mx-auto mb-4 w-20 h-20 md:w-24 md:h-24"
           />
           <h3 className="text-lg font-medium max-w-xs mx-auto">
             Double-check for any other faults
@@ -57,7 +57,7 @@ const ServiceSection = () => {
           <img
             src={CarInspection4}
             alt="Maintenance Advice"
-            className="mx-auto mb-4 w-24 h-24"
+            className="mx-auto mb-4 w-20 h-20 md:w-24 md:h-24"
           />
           <h3 className="text-lg font-medium max-w-xs mx-auto">
             Offer expert advice on maintenance
@@ -70,7 +70,7 @@ const ServiceSection = () => {
           <img
             src={Payment}
             alt="Payment Methods"
-            className="mx-auto mb-4 w-24 h-24"
+            className="mx-auto mb-4 w-20 h-20 md:w-24 md:h-24"
           />
           <h3 className="text-lg font-medium max-w-xs mx-auto">
             Secure payment options available

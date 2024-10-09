@@ -1,10 +1,8 @@
-import React from 'react';
-
 // Image variables
 import oilChangeImage from '../assets/img/oilchange.webp';
 import batteryReplacement from '../assets/img/Car-Battery.jpg';
-import checkupImage from '../assets/img/dia.jpg'
-import  towTruckImage from '../assets/img/tow-truck.jpeg'
+import checkupImage from '../assets/img/dia.jpg';
+import towTruckImage from '../assets/img/tow-truck.jpeg';
 
 // Features data
 const features = [
@@ -36,20 +34,20 @@ const features = [
 
 const Features = () => {
   return (
-    <div className="pt-8 py-4 bg-gray-50">
+    <div className="pt-2 py-4 bg-gray-50">
       <div className="container mx-auto px-4">
         {features.map((feature, index) => (
           <div
             key={feature.id}
-            className={`flex flex-col md:flex-row items-center my-48 ${
+            className={`flex flex-col-reverse md:flex-row items-center my-16 md:my-32 lg:my-48 ${
               index % 2 === 0 ? 'md:flex-row-reverse' : ''
             }`}
           >
             {/* Text Section */}
-            <div className="md:w-1/2 p-6 flex flex-col items-center md:items-start">
-              <h2 className="text-4xl font-bold text-gray-900 mb-8">{feature.title}</h2>
-              <p className="text-gray-800 text-xl leading-relaxed mb-6">{feature.description}</p>
-              <ul className="list-disc pl-5 space-y-2 text-gray-800 text-xl">
+            <div className="md:w-1/2 p-4 md:p-6 flex flex-col items-center md:items-start text-center md:text-left">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 md:mb-6">{feature.title}</h2>
+              <p className="text-gray-800 text-base md:text-lg lg:text-xl leading-relaxed mb-4 md:mb-6">{feature.description}</p>
+              <ul className="list-disc pl-5 space-y-2 text-gray-800 text-sm md:text-base lg:text-lg">
                 <li>High-quality services for all car models</li>
                 <li>Authorized and trained technicians</li>
                 <li>Customer satisfaction guaranteed</li>
@@ -57,11 +55,11 @@ const Features = () => {
             </div>
 
             {/* Image Section */}
-            <div className="md:w-1/2 p-6 flex justify-center">
+            <div className="md:w-1/2 p-4 md:p-6 flex justify-center">
               <img
                 src={feature.image}
                 alt={feature.title}
-                className="w-full h-auto max-h-96 rounded-lg shadow-md"
+                className="w-full h-auto max-h-64 md:max-h-80 lg:max-h-96 rounded-lg shadow-md object-cover"
               />
             </div>
           </div>
