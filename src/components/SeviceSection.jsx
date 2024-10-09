@@ -1,4 +1,3 @@
-import React from "react";
 import CarInspection1 from "../assets/img/car-inspection-1.jpg";
 import CarInspection2 from "../assets/img/car-inspection-2.jpg";
 import CarInspection3 from "../assets/img/car-inspection-3.jpg";

@@ -1,4 +1,3 @@
-import React from "react";
 import camaro from "../assets/img/camaro.jpg"; // Ensure the correct path
 
 const HowWeDoIt = () => {

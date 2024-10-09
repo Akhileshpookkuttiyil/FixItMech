@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import './index.css'; // Make sure to import Tailwind CSS
 import HeroSection from './components/HeroSection';
 import Footer from './components/Footer';

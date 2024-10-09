@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 // Image variables for product icons (dummy paths, replace with actual)
 import maintenanceIcon from '../assets/img/car-maintain.jpg';
@@ -104,7 +104,7 @@ const productGroups = [
 
 const Store = () => {
   return (
-    <div className="py-12 bg-gray-50">
+    <div className="py-12 bg-gray-50 my-40">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-8">Browse Our Parts Collection</h2>
         
