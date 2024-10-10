@@ -5,11 +5,12 @@ import logo from '../assets/img/car-icn2.png';
 import slider1 from '../assets/img/1st.jpg';
 import slider2 from '../assets/img/2nd.jpg';
 import slider3 from '../assets/img/3rd.jpg';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [fade, setFade] = useState(true);
+  const [setFade] = useState(true);
 
   const slides = [
     {
@@ -74,7 +75,7 @@ const HeroSection = () => {
               <li><a href="#" className="text-white hover:text-blue-500">Services</a></li>
               <li><a href="#" className="text-white hover:text-blue-500">Contact</a></li>
               <li><a href="#" className="text-white hover:text-blue-500">About</a></li>
-              <li><a href="#" className="text-white bg-red-800 rounded-sm p-2 hover:text-blue-500">Login</a></li>
+              <li><Link to="/login" className="text-white bg-red-800 rounded-sm p-2 hover:text-blue-500">Login</Link></li>
             </ul>
           </nav>
 
