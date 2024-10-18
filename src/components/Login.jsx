@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import BackgroundImage from "../assets/img/mech_login.jpg";
 import googleIcon from "../assets/img/google.png";
-import twitterIcon from "../assets/img/x.png"; // Add your Twitter icon
-import facebookIcon from "../assets/img/fb.png"; // Add your Facebook icon
+import twitterIcon from "../assets/img/x.png"; // Twitter icon
+import facebookIcon from "../assets/img/fb.png"; // Facebook icon
 import { Link } from 'react-router-dom';
 
 const LoginPage = () => {
@@ -26,11 +26,11 @@ const LoginPage = () => {
       ></div>
 
       {/* Container for Login Page Content */}
-      <div className="relative z-10 flex h-[80vh] w-[80vw] bg-white rounded-lg overflow-hidden shadow-lg">
+      <div className="relative z-10 flex flex-col md:flex-row h-auto md:h-[90vh] lg:h-[85vh] w-[90vw] md:w-[80vw] lg:w-[75vw] bg-white rounded-lg overflow-hidden shadow-lg">
         
-        {/* Left Section */}
+        {/* Left Section (Social Media Buttons for Larger Screens) */}
         <div
-          className="w-2/5 bg-cover bg-center relative"
+          className="hidden md:flex md:w-2/5 bg-cover bg-center relative"
           style={{ backgroundImage: `url(${BackgroundImage})` }}
         >
           {/* Title and Social Icons */}
@@ -58,9 +58,26 @@ const LoginPage = () => {
           </div>
         </div>
 
-        {/* Right Section */}
-        <div className="w-3/5 flex flex-col justify-center p-16 bg-gray-50">
-          <h2 className="text-3xl font-bold mb-16">Sign in</h2>
+        {/* Right Section (Form and Social Media Buttons for Small Screens) */}
+        <div className="w-full md:w-3/5 flex flex-col justify-center p-8 md:p-16 bg-gray-50">
+          
+          {/* Social Media Icons for Small Screens */}
+          <div className="md:hidden mb-8 text-center">
+            <h3 className="text-gray-700 text-lg font-semibold mb-4">Sign in with</h3>
+            <div className="flex space-x-4 justify-center">
+              <button aria-label="Sign in with Google" className="p-2 rounded-full shadow-lg hover:shadow-xl transition">
+                <img src={googleIcon} alt="Google" className="w-8 h-8" />
+              </button>
+              <button aria-label="Sign in with Twitter" className="p-2 rounded-full shadow-lg hover:shadow-xl transition">
+                <img src={twitterIcon} alt="Twitter" className="w-7 h-7" />
+              </button>
+              <button aria-label="Sign in with Facebook" className="p-2 rounded-full shadow-lg hover:shadow-xl transition">
+                <img src={facebookIcon} alt="Facebook" className="w-8 h-8" />
+              </button>
+            </div>
+          </div>
+
+          <h2 className="text-3xl font-bold mb-8 text-center md:text-left">Sign in</h2>
 
           {/* Sign-In Form */}
           <div className="flex flex-col space-y-4">
@@ -79,7 +96,11 @@ const LoginPage = () => {
                 onClick={togglePasswordVisibility}
                 className="absolute right-4 top-3 text-gray-400 cursor-pointer"
               >
-                {showPassword ? 'Hide' : 'Show'}
+                {showPassword ? (
+                  <i className="fas fa-eye-slash"></i> // Eye Slash Icon
+                ) : (
+                  <i className="fas fa-eye"></i> // Eye Icon
+                )}
               </span>
             </div>
             <div className="text-right">
@@ -87,7 +108,7 @@ const LoginPage = () => {
                 Forgot your password?
               </a>
             </div>
-            <button className="bg-gray-400 w-32 text-white py-2 px-4 rounded-full">
+            <button className="bg-gray-400 w-full md:w-32 text-white py-2 px-4 rounded-full">
               Sign in
             </button>
           </div>

@@ -38,7 +38,7 @@ const Services = () => {
             <h3 className="text-xl font-bold text-white h-12 w-full flex items-center justify-center">
               {service.title}
             </h3>
-            <p className="text-gray-400 h-16 w-full flex items-center justify-center text-center mt-4 font-serif">
+            <p className="text-gray-400 h-16 w-full flex items-center justify-center text-center mt-4">
               {service.description}
             </p>
           </div>

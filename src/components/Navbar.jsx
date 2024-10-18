@@ -24,7 +24,7 @@ const Navbar = () => {
 
         <nav className="hidden md:flex relative" data-aos="fade-left">
           <ul className="flex space-x-12">
-            <li><a href="#" className="text-white hover:text-blue-500">Home</a></li>
+            <li><Link to="/" className="text-white hover:text-blue-500">Home</Link></li>
             <li className="relative">
               <button 
                 onClick={toggleDropdown}
@@ -33,19 +33,21 @@ const Navbar = () => {
                 Services
               </button>
               {isDropdownOpen && (
-                <ul className="absolute left-0 mt-2 w-48 text-white rounded shadow-lg">
-                  <li><a href="#" className="block px-4 py-2 hover:bg-gray-200">Repair</a></li>
-                  <li><a href="#" className="block px-4 py-2 hover:bg-gray-200">Maintenance</a></li>
-                  <li><a href="#" className="block px-4 py-2 hover:bg-gray-200">Diagnostics</a></li>
-                  <li><a href="#" className="block px-4 py-2 hover:bg-gray-200">Tow Truck</a></li>
-                  <li><a href="#" className="block px-4 py-2 hover:bg-gray-200">Oil Change</a></li>
-                  <li><a href="#" className="block px-4 py-2 hover:bg-gray-200">Battery Replacement</a></li>
+                <ul className="absolute left-0 mt-2 w-48 bg-gray-800 text-white rounded shadow-lg">
+                  <li><Link to="/repair" className="block px-4 py-2 hover:bg-gray-200 hover:text-black">Repair</Link></li>
+                  <li><Link to="/maintenance" className="block px-4 py-2 hover:bg-gray-200 hover:text-black">Maintenance</Link></li>
+                  <li><Link to="/diagnostics" className="block px-4 py-2 hover:bg-gray-200 hover:text-black">Diagnostics</Link></li>
+                  <li><Link to="/towtruck" className="block px-4 py-2 hover:bg-gray-200 hover:text-black">Tow Truck</Link></li>
+                  <li><Link to="/oilchange" className="block px-4 py-2 hover:bg-gray-200 hover:text-black">Oil Change</Link></li>
+                  <li><Link to="/batteryreplacement" className="block px-4 py-2 hover:bg-gray-200 hover:text-black">Battery Replacement</Link></li>
                 </ul>
               )}
             </li>
-            <li><a href="#" className="text-white hover:text-blue-500">Contact</a></li>
-            <li><a href="#" className="text-white hover:text-blue-500">About</a></li>
-            <li><Link to="/login" className="text-white bg-red-800 rounded-sm p-2 hover:text-blue-500">Login</Link></li>
+            <li><Link to="/contact" className="text-white hover:text-blue-500">Contact</Link></li>
+            <li><Link to="/about" className="text-white hover:text-blue-500">About</Link></li>
+            <li>
+              <Link to="/login" className="text-white bg-red-800 rounded-sm p-2 hover:text-blue-500">Login</Link>
+            </li>
           </ul>
         </nav>
 
@@ -63,32 +65,29 @@ const Navbar = () => {
       </div>
 
       {isMobileMenuOpen && (
-        <nav id="mobile-menu" className="md:hidden">
-          <ul className="flex flex-col space-y-4 text-center mt-2">
-            <li><a href="#" className="text-white hover:text-blue-500">Home</a></li>
-            <li>
-              <button 
-                onClick={toggleDropdown}
-                className="text-white hover:text-blue-500 focus:outline-none"
-              >
-                Services
-              </button>
-              {isDropdownOpen && (
-                <ul className="mt-2 w-full text-white rounded shadow-lg">
-                  <li><a href="#" className="block px-4 py-2 hover:bg-gray-200">Repair</a></li>
-                  <li><a href="#" className="block px-4 py-2 hover:bg-gray-200">Maintenance</a></li>
-                  <li><a href="#" className="block px-4 py-2 hover:bg-gray-200">Diagnostics</a></li>
-                  <li><a href="#" className="block px-4 py-2 hover:bg-gray-200">Tow Truck</a></li>
-                  <li><a href="#" className="block px-4 py-2 hover:bg-gray-200">Oil Change</a></li>
-                  <li><a href="#" className="block px-4 py-2 hover:bg-gray-200">Battery Replacement</a></li>
-                </ul>
-              )}
-            </li>
-            <li><a href="#" className="text-white hover:text-blue-500">Contact</a></li>
-            <li><a href="#" className="text-white hover:text-blue-500">About</a></li>
-            <li><a href="#" className="text-white bg-red-800 rounded-sm p-2 hover:text-blue-500">Login</a></li>
-          </ul>
-        </nav>
+        <div className="md:hidden bg-gray-800 p-4">
+          <form className="flex flex-col space-y-4">
+            <input 
+              type="text" 
+              placeholder="Name" 
+              className="p-2 rounded border border-gray-300" 
+              required
+            />
+            <input 
+              type="email" 
+              placeholder="Email" 
+              className="p-2 rounded border border-gray-300" 
+              required
+            />
+            <textarea 
+              placeholder="Message" 
+              className="p-2 rounded border border-gray-300" 
+              rows="3" 
+              required
+            />
+            <button type="submit" className="bg-red-800 text-white py-2 rounded">Submit</button>
+          </form>
+        </div>
       )}
     </header>
   );

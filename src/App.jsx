@@ -12,6 +12,7 @@ import Steps from './components/Steps';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import routing
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
   return (
