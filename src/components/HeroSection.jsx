@@ -1,16 +1,13 @@
 import { useState, useEffect } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import logo from '../assets/img/car-icn2.png';
+import Navbar from './Navbar'; // Adjust the import path if necessary
 import slider1 from '../assets/img/1st.jpg';
 import slider2 from '../assets/img/2nd.jpg';
 import slider3 from '../assets/img/3rd.jpg';
-import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [setFade] = useState(true);
 
   const slides = [
     {
@@ -35,75 +32,25 @@ const HeroSection = () => {
       duration: 1200,
       once: true,
     });
-
-    const interval = setInterval(() => {
-      setFade(false);
-      setTimeout(() => {
-        setCurrentSlide((prev) => (prev + 1) % slides.length);
-        setFade(true);
-      }, 500);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [slides.length]);
-
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
+  }, []);
 
   const handleSlideChange = (index) => {
     setCurrentSlide(index);
   };
 
   return (
-    <section
-      className={`relative bg-cover bg-center text-white h-screen transition-opacity duration-700`}
-      style={{ backgroundImage: `url(${slides[currentSlide].background})` }}
-    >
+    <section className="relative bg-cover bg-center text-white h-screen">
+      <div
+        className="absolute inset-0 transition-opacity duration-1000 bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${slides[currentSlide].background})`,
+          backgroundSize: 'cover', // Ensure the background covers the entire area
+          backgroundPosition: 'center', // Center the image
+        }}
+      ></div>
       <div className="absolute inset-0 bg-black opacity-50"></div>
 
-      <header className="relative z-10">
-        <div className="container mx-auto flex flex-wrap items-center justify-between p-4">
-          <div className="flex items-center" data-aos="fade-right">
-            <img src={logo} alt="Logo" className="h-5 sm:h-9 mr-2" />
-            <h1 className="text-base sm:text-2xl md:text-3xl font-bold text-red-800 whitespace-nowrap">FixItMech</h1>
-          </div>
-
-          <nav className="hidden md:flex " data-aos="fade-left">
-            <ul className="flex space-x-4">
-              <li><a href="#" className="text-white hover:text-blue-500">Home</a></li>
-              <li><a href="#" className="text-white hover:text-blue-500">Services</a></li>
-              <li><a href="#" className="text-white hover:text-blue-500">Contact</a></li>
-              <li><a href="#" className="text-white hover:text-blue-500">About</a></li>
-              <li><Link to="/login" className="text-white bg-red-800 rounded-sm p-2 hover:text-blue-500">Login</Link></li>
-            </ul>
-          </nav>
-
-          <div className="md:hidden">
-            <button id="menu-toggle" className="text-white focus:outline-none" onClick={toggleMobileMenu}>
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-              </svg>
-            </button>
-          </div>
-
-          <button className="hidden md:block text-white px-6 py-2 border border-white border-opacity-50 rounded-lg transition hover:bg-white hover:text-blue-500">
-            Book An Appointment
-          </button>
-        </div>
-
-        {isMobileMenuOpen && (
-          <nav id="mobile-menu" className="md:hidden">
-            <ul className="flex flex-col space-y-4 text-center mt-2">
-              <li><a href="#" className="text-white hover:text-blue-500">Home</a></li>
-              <li><a href="#" className="text-white hover:text-blue-500">Services</a></li>
-              <li><a href="#" className="text-white hover:text-blue-500">Contact</a></li>
-              <li><a href="#" className="text-white hover:text-blue-500">About</a></li>
-              <li><a href="#" className="text-white bg-red-800 rounded-sm p-2 hover:text-blue-500">Login</a></li>
-            </ul>
-          </nav>
-        )}
-      </header>
+      <Navbar /> {/* Use Navbar component here */}
 
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-center h-full px-6">
         <div className="text-center md:text-left md:w-1/2 mb-4 md:mb-0 ml-8" data-aos="fade-up">
@@ -159,7 +106,7 @@ const HeroSection = () => {
                 className="mt-1 block w-full p-2 border border-white border-opacity-50 bg-transparent text-gray-400 placeholder-gray-400 appearance-none focus:ring-0 focus:bg-transparent focus:outline-none"
                 required
               >
-                <option value="">Choose a service</option>
+                <option value="" className="bg-gray-800" disabled>Choose a service</option>
                 <option value="repair" className="bg-gray-800">Repair</option>
                 <option value="maintenance" className="bg-gray-800">Maintenance</option>
                 <option value="diagnostics" className="bg-gray-800">Diagnostics</option>
@@ -174,7 +121,7 @@ const HeroSection = () => {
                 required
               />
             </div>
-            <button type="submit" className="w-full border border-white border-opacity-50 bg-transparent text-white py-2 hover:bg-white hover:text-blue-500 transition">Submit</button>
+            <button type="submit" className="w-full border border-white border-opacity-50 bg-transparent text-white py-2 transition">Submit</button>
           </form>
         </div>
       </div>
