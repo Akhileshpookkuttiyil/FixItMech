@@ -28,6 +28,14 @@ const LoginPage = () => {
       {/* Container for Login Page Content */}
       <div className="relative z-10 flex flex-col md:flex-row h-auto md:h-[90vh] lg:h-[85vh] w-[90vw] md:w-[80vw] lg:w-[75vw] bg-white rounded-lg overflow-hidden shadow-lg">
         
+                {/* Home Icon Link in Top Left Corner */}
+                <div className="absolute top-6 left-4 z-20 text-red-100">
+          <Link to="/" className="flex items-center">
+            <i className="fas fa-angle-left fa-lg mt-1.5 w-4"></i> {/* Left Angular Bracket Icon */}
+            <i className="fas fa-home fa-lg"></i>
+          </Link>
+        </div>
+
         {/* Left Section (Social Media Buttons for Larger Screens) */}
         <div
           className="hidden md:flex md:w-2/5 bg-cover bg-center relative"
@@ -35,22 +43,15 @@ const LoginPage = () => {
         >
           {/* Title and Social Icons */}
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center">
-            {/* Title */}
             <h3 className="text-white text-lg font-semibold mb-2">Sign in with</h3>
 
-            {/* Social Media Icons Row */}
             <div className="flex space-x-4 justify-center -mb-6">
-              {/* Google Icon */}
               <button aria-label="Sign in with Google" className="p-2 rounded-full shadow-lg hover:shadow-xl transition">
                 <img src={googleIcon} alt="Google" className="w-8 h-8" />
               </button>
-
-              {/* Twitter Icon */}
               <button aria-label="Sign in with Twitter" className="p-2 rounded-full shadow-lg hover:shadow-xl transition">
                 <img src={twitterIcon} alt="Twitter" className="w-7 h-7" />
               </button>
-
-              {/* Facebook Icon */}
               <button aria-label="Sign in with Facebook" className="p-2 rounded-full shadow-lg hover:shadow-xl transition">
                 <img src={facebookIcon} alt="Facebook" className="w-8 h-8" />
               </button>

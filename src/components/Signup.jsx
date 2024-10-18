@@ -32,6 +32,13 @@ const SignupPage = () => {
 
       {/* Container for Signup Page Content */}
       <div className="relative z-10 flex flex-col md:flex-row h-auto md:h-[90vh] w-[90vw] max-w-6xl bg-white rounded-lg overflow-hidden shadow-lg">
+                {/* Home Icon Link in Top Left Corner */}
+                <div className="absolute top-6 left-4 z-20 text-red-100">
+          <Link to="/" className="flex items-center">
+            <i className="fas fa-angle-left fa-lg mt-1.5 w-4"></i> {/* Left Angular Bracket Icon */}
+            <i className="fas fa-home fa-lg"></i>
+          </Link>
+        </div>
         
         {/* Left Section (Social Sign-Up Buttons for Large Screens) */}
         <div
