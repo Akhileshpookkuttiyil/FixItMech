@@ -39,7 +39,7 @@ const Features = () => {
         {features.map((feature, index) => (
           <div
             key={feature.id}
-            className={`flex flex-col-reverse md:flex-row items-center my-16 md:my-32 lg:my-48 ${
+            className={`flex flex-col-reverse md:flex-row items-center my-10 md:my-32 lg:my-32 ${
               index % 2 === 0 ? 'md:flex-row-reverse' : ''
             }`}
           >

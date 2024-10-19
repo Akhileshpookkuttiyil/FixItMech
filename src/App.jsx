@@ -6,7 +6,7 @@ import Services from './components/services';
 import ServiceSection from './components/SeviceSection';
 // import BookServices from './components/BookServices';
 import Features from './components/Features';
-// import Store from './components/Store';
+import Store from './components/Store';
 import FAQ from './components/Faq';
 import Steps from './components/Steps';
 import Login from './components/Login';
@@ -27,6 +27,7 @@ function App() {
                 <HeroSection />
                 <ServiceSection />
                 <Steps />
+                <Store/>
                 <Features />
                 <Services />
                       {/* <Store/>
