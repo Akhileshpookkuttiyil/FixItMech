@@ -36,10 +36,15 @@ const Features = () => {
   return (
     <div className="pt-2 py-4 bg-gray-50">
       <div className="container mx-auto px-4">
+        {/* Common Heading */}
+        {/* <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-8">
+          Our Services
+        </h2> */}
+
         {features.map((feature, index) => (
           <div
             key={feature.id}
-            className={`flex flex-col-reverse md:flex-row items-center my-10 md:my-32 lg:my-32 ${
+            className={`flex flex-col-reverse md:flex-row items-center my-10 md:my-32 lg:my-20 ${
               index % 2 === 0 ? 'md:flex-row-reverse' : ''
             }`}
           >
@@ -70,3 +75,4 @@ const Features = () => {
 };
 
 export default Features;
+
