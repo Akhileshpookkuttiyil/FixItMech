@@ -90,7 +90,7 @@ const Store = () => {
           <div className="flex justify-center mt-20">
             <button
               onClick={handleLoadMore}
-              className="border border-black text-gray-700 py-2 px-4 rounded hover:bg-blue-600 hover:text-white transition duration-300 flex items-center justify-center"
+              className="border border-black text-gray-700 py-2 px-4 rounded transition duration-300 flex items-center justify-center"
             >
               <svg
                 className="w-4 h-4 mr-2" // Adjust the size as needed
@@ -115,7 +115,7 @@ const Store = () => {
           <div className="flex justify-center mt-6">
             <button
               onClick={handleHide}
-              className="border border-black text-gray-700 py-2 px-4 rounded hover:bg-red-600 hover:text-white transition duration-300 flex items-center justify-center mt-20"
+              className="border border-black text-gray-700 py-2 px-4 rounded transition duration-300 flex items-center justify-center mt-20"
             >
               <svg
                 className="w-4 h-4 mr-2" // Adjust the size as needed

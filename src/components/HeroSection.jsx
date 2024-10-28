@@ -28,9 +28,16 @@ const HeroSection = () => {
   ];
 
   useEffect(() => {
+    // Initialize AOS animation
     AOS.init({
       duration: 1200,
       once: true,
+    });
+
+    // Preload all images
+    slides.forEach(slide => {
+      const img = new Image();
+      img.src = slide.background;
     });
   }, []);
 
@@ -44,13 +51,13 @@ const HeroSection = () => {
         className="absolute inset-0 transition-opacity duration-1000 bg-cover bg-center"
         style={{
           backgroundImage: `url(${slides[currentSlide].background})`,
-          backgroundSize: 'cover', // Ensure the background covers the entire area
-          backgroundPosition: 'center', // Center the image
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
         }}
       ></div>
       <div className="absolute inset-0 bg-black opacity-50"></div>
 
-      <Navbar /> {/* Use Navbar component here */}
+      <Navbar />
 
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-center h-full px-6">
         <div className="text-center md:text-left md:w-1/2 mb-4 md:mb-0 ml-8" data-aos="fade-up">
